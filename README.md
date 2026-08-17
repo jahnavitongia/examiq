@@ -1,54 +1,91 @@
-# ExamIQ App
+# ExamIQ
 
-ExamIQ is an AI-powered exam integrity platform built with Flutter. It combines student authentication, face-based enrollment and verification, exam monitoring, and teacher-side reporting in a single cross-platform application.
+ExamIQ is an AI-powered exam integrity platform designed to make online examinations more secure and reliable. It combines student authentication, face-based identity verification, exam monitoring, and teacher-side reporting into a single cross-platform application.
 
-## What It Does
+## Features
 
-- Student login and registration with Firebase Authentication
-- Face enrollment and identity verification before exams
-- Ongoing exam monitoring with integrity checks
-- Teacher dashboard for managing exams and reviewing outcomes
-- Report generation and report-sharing flow after exam completion
-- Local Dart backend for enrollment, verification, and monitoring APIs
+* Student registration and login using Firebase Authentication
+* Face enrollment and identity verification before exams
+* Exam monitoring and integrity checks
+* Teacher dashboard for exam management
+* Student performance and integrity reports
+* Report generation and sharing after exam completion
+* Cross-platform application using Flutter
 
 ## Tech Stack
 
-- Flutter for the app experience
-- Firebase Authentication and Firestore for user management and app data
-- Dart HTTP backend for proctoring-related API endpoints
-- Camera and image-processing packages for face capture workflows
+* **Frontend:** Flutter
+* **Backend & Authentication:** Firebase
+* **Database:** Cloud Firestore
+* **AI/Computer Vision:** Face recognition and verification
 
 ## Project Structure
 
-- `lib/` Flutter app screens, services, and UI flows
-- `backend/` Local Dart backend used for enrollment and monitoring endpoints
-- `assets/` Static assets used by the app
-- `web/`, `ios/`, `macos/`, `windows/` Platform-specific Flutter targets
+```text
+ExamIQ/
+├── lib/
+│   ├── screens/
+│   ├── services/
+│   ├── models/
+│   └── widgets/
+├── assets/
+├── android/
+├── ios/
+├── web/
+├── pubspec.yaml
+└── README.md
+```
 
 ## Getting Started
 
 ### Prerequisites
 
-- Flutter SDK
-- Dart SDK
-- Firebase project configuration
+* Flutter SDK
+* Dart SDK
+* Firebase project
+* Android Studio or VS Code
 
-### Run The Flutter App
+### Installation
+
+1. Clone the repository:
+
+```bash
+git clone <repository-url>
+```
+
+2. Navigate to the project directory:
+
+```bash
+cd ExamIQ
+```
+
+3. Install dependencies:
 
 ```bash
 flutter pub get
+```
+
+4. Configure Firebase for the project.
+
+5. Run the application:
+
+```bash
 flutter run
 ```
 
-### Run The Local Backend
+## How It Works
 
-```bash
-dart run backend/server.dart
-```
+1. **Student Authentication** – Students register and log in securely.
+2. **Face Enrollment** – The student's face is registered for identity verification.
+3. **Pre-Exam Verification** – The system verifies the student's identity before starting the exam.
+4. **Exam Monitoring** – Integrity checks are performed during the examination.
+5. **Exam Completion** – Exam results and monitoring information are recorded.
+6. **Teacher Dashboard** – Teachers can review exam outcomes and generated reports.
 
-The backend starts on `http://0.0.0.0:8000` and exposes endpoints for health checks, enrollment, verification, monitoring, and report generation.
+## Purpose
 
-## Notes
+ExamIQ aims to improve examination integrity by reducing identity fraud and enabling automated monitoring, while providing teachers with a centralized platform to review examination outcomes.
 
-- Enrollment data is stored locally by the backend in `backend/data/`, which is ignored by git.
-- Firebase client configuration is included for app setup and should match the intended Firebase project for deployment.
+## License
+
+This project is developed for educational and academic purposes.
